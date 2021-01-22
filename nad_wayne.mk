@@ -24,10 +24,8 @@
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/wayne/device.mk)
 
-# Inherit Nusantara product configuration
+# Inherit Ancient product configuration
 $(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
-
-$(call inherit-product-if-exists, packages/apps/NusantaraParts/nadproject.mk)
 
 # Define first api level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
@@ -38,10 +36,6 @@ TARGET_BOOT_ANIMATION_RES := 1080
 # Pixel-charging
 USE_PIXEL_CHARGING := true
 
-# Package Apps
-PRODUCT_PACKAGES += \
-    Calendar
-
 # Build Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="wayne-user 9 PKQ1.180904.001 V10.3.4.0.PDCCNXM release-keys"
@@ -49,6 +43,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 # Device identifier
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := nad_wayne
+PRODUCT_NAME := ancient_wayne
 PRODUCT_DEVICE := wayne
 PRODUCT_MODEL := MI 6X
